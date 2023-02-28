@@ -1,3 +1,3 @@
-module github.com/wthsjy/sfchannel/v1
+module github.com/wthsjy/sfchannel
 
 go 1.20
