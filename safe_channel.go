@@ -21,7 +21,7 @@ func NewChannel[T any](capacity uint) *SafeChannel[T] {
 	return sc
 }
 
-// ProduceOrDiscard  is buf is full ,then discard value
+// ProduceOrDiscard  if the buf is full ,then discard value
 func (sc *SafeChannel[T]) ProduceOrDiscard(value T) (success bool, err error) {
 	sc.mux.Lock()
 	defer sc.mux.Unlock()
